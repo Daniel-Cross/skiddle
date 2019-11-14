@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import EventCard from "../components/EventCard";
 
-describe("SearchBar", () => {
+describe("EventCard", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<EventCard />, div);
+    ReactDOM.render(<EventCard details={{}} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

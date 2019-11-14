@@ -1,31 +1,35 @@
 import React, { Component } from "react";
 import SearchBar from "./components/SearchBar";
 import getEvents from "./services/getEvents";
-import EventCard from "./components/EventCard";
+import EventsPage from "./components/EventsPage";
 
 class App extends Component {
   state = {
     event: "",
-    searchEvent: ""
+    searchResults: []
   };
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.event !== this.state.event) {
+      getEvents(this.state.event).then(data => {
+        this.setState({ searchResults: data });
+      });
+    }
+  }
 
   handleChange = e => {
     this.setState({
       event: e.target.value
     });
-
-    getEvents(this.state.event).then(data => {
-      this.setState({ searchEvent: data });
-    });
   };
 
   render() {
-    const { event } = this.state;
+    const { event, searchResults } = this.state;
 
     return (
       <div className="App">
         <SearchBar type="text" value={event} handleChange={this.handleChange} />
-        <EventCard />
+        <EventsPage searchResults={searchResults} />
       </div>
     );
   }
