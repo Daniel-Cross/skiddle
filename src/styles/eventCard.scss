@@ -1,0 +1,47 @@
+.EventsPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.EventCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: gray;
+  border-radius: 5px;
+  margin-top: 20px;
+  max-width: 15em;
+  box-shadow: 5px 5px 8px rgba(148, 148, 148, 0.8);
+
+  .event-img {
+    min-height: 15em;
+    min-width: 15em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .event-details {
+    padding: 0 18px 8px 18px;
+
+    .event-name {
+      text-align: center;
+    }
+
+    .details-btn {
+      background-color: $primary-colour;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      height: 50px;
+      width: 100%;
+      font-size: 20px;
+    }
+
+    i {
+      margin-right: 30px;
+      font-size: 20px;
+    }
+  }
+}

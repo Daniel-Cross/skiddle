@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SearchBar from "./components/SearchBar";
 import getEvents from "./services/getEvents";
+import EventCard from "./components/EventCard";
 
 class App extends Component {
   state = {
@@ -24,6 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar type="text" value={event} handleChange={this.handleChange} />
+        <EventCard />
       </div>
     );
   }
