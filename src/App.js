@@ -1,14 +1,20 @@
 import React, { Component } from "react";
 import SearchBar from "./components/SearchBar";
+import getEvents from "./services/getEvents";
 
 class App extends Component {
   state = {
-    event: ""
+    event: "",
+    searchEvent: ""
   };
 
   handleChange = e => {
     this.setState({
       event: e.target.value
+    });
+
+    getEvents(this.state.event).then(data => {
+      this.setState({ searchEvent: data });
     });
   };
 
