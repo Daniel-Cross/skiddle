@@ -1,0 +1,26 @@
+.SearchBar {
+  background-color: rgb(1, 211, 211);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .skiddle-logo {
+    height: 180px;
+    width: 360px;
+  }
+
+  ::-webkit-input-placeholder {
+    text-align: center;
+  }
+
+  .event-input {
+    height: 50px;
+    width: 60%;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: none;
+    font-size: 25px;
+  }
+}
