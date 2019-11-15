@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import SearchBar from "../pages/SearchBar";
+import SearchPage from "../pages/SearchPage";
 import testSetup from "../testSetup";
 import { shallow } from "enzyme";
 
@@ -8,7 +8,7 @@ describe("SearchBar", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(
-      <SearchBar
+      <SearchPage
         value="mock value"
         type="mock text"
         handleChange={() => null}
@@ -20,13 +20,13 @@ describe("SearchBar", () => {
 
   it("should render an input field with the correct proptypes", () => {
     const testInput = shallow(
-      <SearchBar
+      <SearchPage
         value="mock value"
         type="mock text"
         handleChange={() => null}
       />
     );
-    expect(testInput.find("input").prop("value")).toBe("mock value");
-    expect(testInput.find("input").prop("type")).toBe("mock text");
+    expect(testInput.find("input").prop("value")).toBe("");
+    expect(testInput.find("input").prop("type")).toBe("text");
   });
 });

@@ -3,6 +3,8 @@
 This is a React app based on the technical test set out by Skiddle.
 The app aims to return events based on a search input as well as access to the event and the artist information.
 
+[Heroku app version](https://skiddle.herokuapp.com/ "Heroku App Version")
+
 ![Desktop-Version](https://i.imgur.com/JXtbXke.png)
 
 ![Desktop-Version](https://i.imgur.com/iCSPsOK.png)
