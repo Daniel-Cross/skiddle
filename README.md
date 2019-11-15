@@ -3,7 +3,7 @@
 This is a React app based on the technical test set out by Skiddle.
 The app aims to return events based on a search input as well as access to the event and the artist information.
 
-![Desktop-Version](https://imgur.com/5e4ed627-cafc-4161-bc98-fece4670d7b0)
+![Desktop-Version](https://i.imgur.com/JXtbXke.png)
 
 ![Desktop-Version](https://i.imgur.com/iCSPsOK.png)
 
