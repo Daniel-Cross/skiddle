@@ -1,36 +1,22 @@
 import React, { Component } from "react";
-import SearchBar from "./components/SearchBar";
-import getEvents from "./services/getEvents";
-import EventsPage from "./components/EventsPage";
+import SearchPage from "./pages/SearchPage";
+import EventPage from "./pages/EventPage";
+import ArtistPage from "./pages/ArtistPage";
 
 class App extends Component {
-  state = {
-    event: "",
-    searchResults: []
-  };
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.event !== this.state.event) {
-      getEvents(this.state.event).then(data => {
-        this.setState({ searchResults: data });
-      });
+  renderPage(params) {
+    if (params.eventId) {
+      return <EventPage id={params.eventId} />;
+    } else if (params.artistId) {
+      return <ArtistPage id={params.artistId} />;
+    } else {
+      return <SearchPage />;
     }
   }
 
-  handleChange = e => {
-    this.setState({
-      event: e.target.value
-    });
-  };
-
   render() {
-    const { event, searchResults } = this.state;
-
     return (
-      <div className="App">
-        <SearchBar type="text" value={event} handleChange={this.handleChange} />
-        <EventsPage searchResults={searchResults} />
-      </div>
+      <div className="App">{this.renderPage(this.props.match.params)}</div>
     );
   }
 }

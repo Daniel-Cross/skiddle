@@ -1,0 +1,69 @@
+.EventsPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(228, 228, 228);
+}
+
+.event-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-colour;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 100%;
+  color: #fff;
+}
+
+.event-img {
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  box-shadow: 5px 5px 8px rgba(148, 148, 148, 0.8);
+  border-radius: 10px;
+  padding: 0 10px;
+  background-color: #fff;
+
+  .back-btn {
+    margin: 20px 0 0 0;
+    float: left;
+  }
+
+  a {
+    color: $primary-colour;
+    text-decoration: none;
+    padding: 0;
+  }
+
+  .artists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .artists-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+
+  .artist-img {
+    height: 100px;
+    width: 100px;
+  }
+}

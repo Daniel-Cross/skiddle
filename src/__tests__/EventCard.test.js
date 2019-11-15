@@ -1,11 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import testSetup from "../testSetup";
 import EventCard from "../components/EventCard";
+import searchResultsMock from "./mocks/search-event-results.json";
+import { shallow } from "enzyme";
 
 describe("EventCard", () => {
   it("renders without crashing", () => {
-    const div = document.createElement("div");
-    ReactDOM.render(<EventCard details={{}} />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const testInput = shallow(
+      <EventCard details={searchResultsMock.results[0]} />
+    );
   });
 });

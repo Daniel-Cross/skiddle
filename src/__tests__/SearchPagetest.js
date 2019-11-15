@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import SearchBar from "../components/SearchBar";
+import SearchBar from "../pages/SearchBar";
 import testSetup from "../testSetup";
 import { shallow } from "enzyme";
 
